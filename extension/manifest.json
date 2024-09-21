@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Website QoLs",
+    "description": "Slash-to-focus on Google Translate and Wikipedia, mainly",
+    "version": "1.0",
+    
+    "content_scripts": [
+        {
+            "js": [ "scripts/google-translate.js" ],
+            "matches": [ "https://translate.google.com/*" ]
+        },
+	{
+            "js": [ "scripts/wikipedia.js" ],
+            "matches": [ "https://*.wikipedia.com/*", "https://*.wikipedia.org/*" ]
+        }
+    ]
+}
