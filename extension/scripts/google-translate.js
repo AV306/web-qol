@@ -1,8 +1,20 @@
-document.addEventListener( "keypress", event =>
+let mainTextInput = document.getElementsByTagName( "textarea" )[0];
+
+document.addEventListener( "keydown", event =>
 {
-  if ( event.key == "/" && document.activeElement !== document.getElementsByTagName( "textarea" )[0] )
+  if ( document.activeElement !== mainTextInput )
   {
-    document.getElementsByTagName( "textarea" )[0].focus();
-    event.preventDefault();
+    switch ( event.code )
+    {
+      case "Slash":
+        mainTextInput.focus();
+        event.preventDefault();
+        break;
+      case "Backspace":
+        mainTextInput.value = "";
+        mainTextInput.focus();
+        event.preventDefault();
+        break;
+    }
   }
 } );
