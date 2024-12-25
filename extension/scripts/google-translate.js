@@ -3,6 +3,7 @@ let clearButton = document.querySelector( "button.GA2I6e" );
 
 document.addEventListener( "keydown", event =>
 {
+    //console.log( event.code );
     if ( event.repeat ) return;
     switch ( event.code )
     {
