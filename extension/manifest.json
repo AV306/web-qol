@@ -9,9 +9,13 @@
             "js": [ "scripts/google-translate.js" ],
             "matches": [ "https://translate.google.com/*" ]
         },
-	{
+        {
             "js": [ "scripts/wikipedia.js" ],
             "matches": [ "https://*.wikipedia.com/*", "https://*.wikipedia.org/*" ]
+        },
+        {
+            "js": [ "scripts/login-microsoftonline_logout.js" ],
+            "matches": [ "https://login.microsoftonline.com/common/oauth2/logout" ]
         }
     ]
 }
